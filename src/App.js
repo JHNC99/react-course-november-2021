@@ -13,6 +13,12 @@ export default function App() {
     setValues([...values, value]);
   };
 
+  //Funcion para borrar los items
+  const deleteData=(id)=>{
+      const newDate=values.filter((values)=>values.id !== id);
+      setValues(newDate);
+  }
+
   return (
     <>
       <header className="navbar navbar-expand-lg bg-dark">
@@ -29,7 +35,7 @@ export default function App() {
           </div>
           <div className="col-md-8">
             <h1>Datos</h1>
-            <Card dataForm={values}/>
+            <Card dataForm={values} deleteData={deleteData}/>
           </div>
         </div>
       </div>

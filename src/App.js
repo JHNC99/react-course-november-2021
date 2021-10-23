@@ -31,6 +31,7 @@ export default function App() {
     setValues(newDate);
   };
 
+
   /* Funcion y state para editar formulario */
   const [editing, setEditing] = useState(false);
 
@@ -66,7 +67,7 @@ export default function App() {
           <div className="col-md-4">
             {editing ? (
               <div>
-                <h2>Edit user</h2>
+                <h2>Editar datos</h2>
                 <EditForm
                   currentUser={currentUser}
                   setEditing={setEditing}
@@ -75,7 +76,7 @@ export default function App() {
               </div>
             ) : (
               <div>
-                <h2>Add user</h2>
+                <h2>Agregar datos</h2>
                 <Form addData={addData} />
               </div>
             )}

@@ -10,8 +10,10 @@ export default function Form({ addData }) {
 
   /* Funcion para  renderizar los datos*/
    const addFormData= (e) => {
-     e.preventDefault();
+      e.preventDefault();
       addData(formValues);
+      //Variable para generar id
+      formValues.id=Math.random().toString(36).substr(2, 9);
   }
 
   /* Destructuring  del state */
